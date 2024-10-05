@@ -9,7 +9,7 @@ library(formattable)
 library(cluster)
 
 # data
-raw_data <- read_csv("C:/Users/adepa/OneDrive/Desktop/Statistical_theory_cluster/Airline_review.csv")
+raw_data <- read_csv("https://raw.githubusercontent.com/depa-tto/Statistical-Learning-Module-Antonio-De-Patto/refs/heads/main/Airline_review.csv")
 
 middle_data <- raw_data %>% dplyr::select(`Airline Name`, Overall_Rating, Verified, `Seat Comfort` : `Value For Money`) %>%
   filter(Verified == 'TRUE')
@@ -112,6 +112,7 @@ formattable(as.data.frame(mediez), caption = "Fig. 2.10: means of every stardard
                                             'Inflight' = color_tile("transparent", "lightblue"),
                                             'Wifi' = color_tile("transparent", "lightblue"),
                                             'Value' = color_tile("transparent", "lightblue")))
+
 
 
 
