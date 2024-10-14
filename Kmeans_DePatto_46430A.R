@@ -10,7 +10,7 @@ library(cluster)
 library(gridExtra) 
 
 # data
-raw_data <- read_csv("https://raw.githubusercontent.com/depa-tto/Statistical-Learning-Module-Antonio-De-Patto/refs/heads/main/Airline_review.csv")
+raw_data <- read_csv("https://raw.githubusercontent.com/depa-tto/Statistical-Learning-Module/refs/heads/main/Airline_review.csv")
 
 middle_data <- raw_data %>% dplyr::select(`Airline Name`, Overall_Rating, Verified, `Seat Comfort` : `Value For Money`) %>%
   dplyr::filter(Verified == 'TRUE')

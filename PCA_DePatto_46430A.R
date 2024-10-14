@@ -9,7 +9,7 @@ library(formattable)
 library(Gifi)
 
 # data
-raw_data <- read_csv("https://raw.githubusercontent.com/depa-tto/Statistical-Learning-Module-Antonio-De-Patto/refs/heads/main/airline_satisfaction.csv")
+raw_data <- read_csv("https://raw.githubusercontent.com/depa-tto/Statistical-Learning-Module/refs/heads/main/airline_satisfaction.csv")
 middle_data <- raw_data[apply(raw_data, MARGIN = 1, FUN = function(rows) all(rows!=0)),] %>% drop_na()
 final_data <- middle_data %>% dplyr::select(`Seat comfort` : `Online boarding`)
 
