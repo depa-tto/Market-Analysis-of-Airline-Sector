@@ -31,7 +31,7 @@ library(margins)
 library(rcompanion)
 
 # data
-raw_data <- read_csv("https://raw.githubusercontent.com/depa-tto/Statistical-Learning-Module/refs/heads/main/airline_satisfaction.csv")
+raw_data <- read_csv("https://raw.githubusercontent.com/depa-tto/Statistical-Learning-Module/dataset/refs/heads/main/airline_satisfaction.csv")
 middle_data <- raw_data[apply(raw_data, MARGIN = 1, FUN = function(rows) all(rows!=0)),] %>% drop_na()
 data <- middle_data %>% dplyr::select(satisfaction : `Flight Distance`) %>% 
   dplyr::rename(satisfaction = satisfaction, gender = Gender, customer_type = `Customer Type`, age = Age,
