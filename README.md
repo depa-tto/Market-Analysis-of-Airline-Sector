@@ -1,1 +1,1 @@
-Statistical Learning module
+Statistical Learning Module exam
